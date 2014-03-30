@@ -3,11 +3,20 @@
 
 using namespace std;
 
+int input(string, int&);
+
 int main()
 {
-  cout << fizzbuzz(1) << endl;
-  cout << fizzbuzz(3) << endl;
-  cout << fizzbuzz(5) << endl;
-  cout << fizzbuzz(15) << endl;
+  int number;
+  string prompt = "Please enter a positive integer: ";
+  while (input(prompt, number) > 0)
+    cout << fizzbuzz(number) << endl;
   return 0;
+}
+
+int input(string prompt, int& number)
+{
+  cout << prompt;
+  cin >> number;
+  return number;
 }
