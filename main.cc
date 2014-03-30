@@ -20,3 +20,4 @@ int input(string prompt, int& number)
   cin >> number;
   return number;
 }
+
